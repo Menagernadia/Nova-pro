@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Nova Pro</title>
+</head>
+<body style="text-align:center; font-family:Arial;">
+
+  <h1>Bienvenue sur Nova Pro 🚀</h1>
+  <p>Ceci est ma première application</p>
+
+  <button onclick="alert('L’application fonctionne 🔥')">
+    Clique-moi
+  </button>
+
+</body>
+</html>
