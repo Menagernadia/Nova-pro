@@ -1,16 +1,73 @@
-<!DOCTYPE html>
-<html>
+ <!DOCTYPE html>
+<html lang="ht">
 <head>
-  <title>Nova Pro</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nova Pro Institute - Enskripsyon</title>
+    <style>
+        body { font-family: 'Segoe UI', sans-serif; background: #f0f2f5; display: flex; justify-content: center; align-items: center; min-height: 100vh; margin: 0; padding: 20px; }
+        .form-container { background: white; padding: 25px; border-radius: 15px; box-shadow: 0 8px 20px rgba(0,0,0,0.1); width: 100%; max-width: 450px; }
+        h2 { color: #075e54; margin-top: 0; text-align: center; }
+        h4 { text-align: center; color: #555; margin-bottom: 20px; }
+        .input-group { margin-bottom: 12px; }
+        label { display: block; font-size: 13px; font-weight: bold; margin-bottom: 5px; color: #333; }
+        input, select { width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 8px; box-sizing: border-box; font-size: 14px; }
+        button { width: 100%; padding: 15px; background: #25d366; color: white; border: none; border-radius: 8px; font-size: 16px; font-weight: bold; cursor: pointer; margin-top: 15px; transition: 0.3s; }
+        button:hover { background: #1ebd59; }
+    </style>
 </head>
-<body style="text-align:center; font-family:Arial;">
+<body>
 
-  <h1>Bienvenue sur Nova Pro 🚀</h1>
-  <p>Ceci est ma première application</p>
+<div class="form-container">
+    <h2>Nova Pro Institute 🎓</h2>
+    <h4>Nou kontan resevwa ou!<br>Formulaire d'inscription</h4>
+    
+    <div class="input-group"><label>Nom:</label><input type="text" id="nom"></div>
+    <div class="input-group"><label>Prénom:</label><input type="text" id="prenom"></div>
+    <div class="input-group"><label>Filière:</label><input type="text" id="filiere" placeholder="Egz: Enfimyè, Enfòmatik..."></div>
+    <div class="input-group"><label>Adresse:</label><input type="text" id="adresse"></div>
+    <div class="input-group"><label>Téléphone:</label><input type="tel" id="tel"></div>
+    <div class="input-group"><label>Personne Responsable:</label><input type="text" id="resp"></div>
+    <div class="input-group"><label>Téléphone Resp:</label><input type="tel" id="tel_resp"></div>
+    <div class="input-group"><label>Disponibilité:</label><input type="text" id="dispo" placeholder="Egz: Maten, Aswè..."></div>
+    <div class="input-group"><label>Frais d'Inscription:</label><input type="text" id="inscrip"></div>
 
-  <button onclick="alert('L’application fonctionne 🔥')">
-    Clique-moi
-  </button>
+    <button onclick="voyeWhatsApp()">Voye sou WhatsApp ✅</button>
+</div>
+
+<script>
+    function voyeWhatsApp() {
+        // RANPLASE NIMIWO SA A PA PA W LA (Kòmanse ak 509)
+        let nimewo 50933112727
+
+        let d = {
+            nom: document.getElementById('nom').value,
+            prenom: document.getElementById('prenom').value,
+            filiere: document.getElementById('filiere').value,
+            adr: document.getElementById('adresse').value,
+            tel: document.getElementById('tel').value,
+            resp: document.getElementById('resp').value,
+            tel_resp: document.getElementById('tel_resp').value,
+            dispo: document.getElementById('dispo').value,
+            inscrip: document.getElementById('inscrip').value
+        };
+
+        if(d.nom == "" || d.tel == "") { alert("Tanpri ranpli Nom ak Téléphone pou pi piti!"); return; }
+
+        let mesaj = "*NOVA PRO INSTITUTE - ENSKRIPSYON*%0A%0A" +
+                    "*Nom:* " + d.nom + "%0A" +
+                    "*Prénom:* " + d.prenom + "%0A" +
+                    "*Filière:* " + d.filiere + "%0A" +
+                    "*Adresse:* " + d.adr + "%0A" +
+                    "*Téléphone:* " + d.tel + "%0A" +
+                    "*Resp:* " + d.resp + "%0A" +
+                    "*Tel Resp:* " + d.tel_resp + "%0A" +
+                    "*Disponibilité:* " + d.dispo + "%0A" +
+                    "*Inscription:* " + d.inscrip;
+
+        window.open("https://wa.me/" + nimewo + "?text=" + mesaj, '_blank');
+    }
+</script>
 
 </body>
 </html>
